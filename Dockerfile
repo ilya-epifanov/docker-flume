@@ -33,4 +33,4 @@ VOLUME /etc/hadoop/conf /etc/flume/conf
 COPY docker-entrypoint.sh /
 ENTRYPOINT ["/docker-entrypoint.sh"]
 
-CMD ["/bin/bash"]
+CMD ["/usr/bin/flume-ng", "agent", "-n", "a1", "-f", "/etc/flume-ng/conf/flume-conf.properties"]
