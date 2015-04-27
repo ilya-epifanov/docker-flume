@@ -17,7 +17,7 @@ COPY cloudera.pref /etc/apt/preferences.d/cloudera.pref
 COPY cloudera.list /etc/apt/sources.list.d/cloudera.list
 COPY cloudera.key /tmp/cloudera.key
 
-RUN useradd -r -d /var/lib/flume-ng -m
+RUN useradd -r -d /var/lib/flume-ng -m flume
 
 RUN apt-key add /tmp/cloudera.key &&\
     apt-get update &&\
