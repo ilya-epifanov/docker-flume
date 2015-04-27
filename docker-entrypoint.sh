@@ -1,9 +1,8 @@
 #!/bin/bash
 set -e
 
-if [ "$1" == 'hdfs' ]; then
-#	chown -R hdfs /var/{lib,log}/hadoop-hdfs
-	set -- gosu hdfs "$@"
+if [ "$1" == 'flume-ng' ]; then
+	set -- gosu flume "$@"
 fi
 
 exec "$@"
