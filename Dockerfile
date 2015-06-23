@@ -1,4 +1,4 @@
-FROM debian:wheezy
+FROM debian:jessie
 
 MAINTAINER Ilya Epifanov <elijah.epifanov@gmail.com>
 
