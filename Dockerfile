@@ -28,9 +28,9 @@ RUN apt-key add /tmp/cloudera.key &&\
 
 ENV PATH /usr/bin:/bin:/usr/local/bin
 
-VOLUME /etc/hadoop/conf /etc/flume/conf
+VOLUME /etc/hadoop/conf /etc/flume-ng/conf
 
 COPY docker-entrypoint.sh /
 ENTRYPOINT ["/docker-entrypoint.sh"]
 
-CMD ["/usr/bin/flume-ng", "agent", "-n", "a1", "-f", "/etc/flume-ng/conf/flume-conf.properties"]
+CMD ["/usr/bin/flume-ng", "agent", "-n", "a1", "-f", "/etc/flume-ng/conf/flume-conf.properties", "--conf", "/etc/flume-ng/conf"]
