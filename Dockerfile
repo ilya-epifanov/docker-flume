@@ -26,6 +26,9 @@ RUN apt-key add /tmp/cloudera.key &&\
     apt-get clean &&\
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
+RUN curl 'http://central.maven.org/maven2/org/apache/lucene/lucene-core/4.6.1/lucene-core-4.6.1.jar' -o /usr/lib/flume-ng/lib/lucene-core-4.6.1.jar
+RUN curl http://central.maven.org/maven2/org/elasticsearch/elasticsearch/0.90.13/elasticsearch-0.90.13.jar -o /usr/lib/flume-ng/lib/elasticsearch-0.90.13.jar
+
 ENV PATH /usr/bin:/bin:/usr/local/bin
 
 VOLUME /etc/hadoop/conf /etc/flume-ng/conf
