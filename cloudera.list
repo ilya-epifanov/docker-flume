@@ -1,1 +1,1 @@
-deb http://archive.cloudera.com/cdh5/debian/wheezy/amd64/cdh wheezy-cdh5.3 contrib
+deb http://archive.cloudera.com/cdh5/debian/jessie/amd64/cdh jessie-cdh5.9 contrib
