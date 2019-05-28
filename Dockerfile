@@ -2,7 +2,7 @@ FROM openjdk:8-jre
 
 MAINTAINER Ilya Epifanov <elijah.epifanov@gmail.com>
 
-ENV FLUME_VERSION=1.8.0
+ENV FLUME_VERSION=1.9.0
 
 RUN apt-get update \
  && apt-get install wget --no-install-recommends -y \
